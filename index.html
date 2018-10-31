@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Application de réservation de vélo pour la ville de Lyon">
+    <title>Location de vélo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="canvas.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Vélo'
+            <span class="span1">V</span>
+        </h1>
+    </header>
+    <!--Diaporama de photo et de texte pour l'accueil-->
+    <section>
+        <div class="caroussel">
+            <div id="container">
+                <div class="infos">
+                    <img class="img" src="images/1.jpg" alt="Image 1">
+                    <div class="infos-text">
+                        <h2>Au quotidien</h2>
+                        <p>Avec l'application Vélo'V vous pourrez prendre un vélo où vous voulez !</p>
+                    </div>
+                </div>
+
+                <div class="infos">
+                    <img class="img" src="images/2.jpg" alt="Image 2">
+                    <div class="infos-text">
+                        <h2>Roulez</h2>
+                        <p>Quelle que soit la formule choisie, les 30 premières minutes de chaque trajet sont toujours
+                            gratuites.
+                            Au-delà, chaque minute supplémentaire consommée sera facturée selon la tarification en
+                            vigueur.
+                            Un trajet ne peut excéder 24h.</p>
+                    </div>
+                </div>
+
+                <div class="infos">
+                    <img class="img" src="images/3.jpg" alt="Image 3">
+                    <div class="infos-text">
+                        <h2>Réservez votre vélo</h2>
+                        <p>3 possibilités : depuis la borne, sélectionner un Vélo’v et le libérer en appuyant sur le
+                            bouton du point d’attache ;
+                            depuis le vélo directement, poser la carte ou le ticket sur le lecteur de carte ; depuis
+                            l’application mobile,
+                            cliquer sur le bouton "libérer un Vélo’v" et choisir le vélo le mieux évalué par les
+                            utilisateurs précédents.
+                            Vous avez 60 secondes pour libérer le Vélo’v choisi</p>
+                    </div>
+                </div>
+                <!-- <img class="img" src="images/1.jpg" alt="Image 1">
+                <img class="img" src="images/2.jpg" alt="Image 2">
+                <img class="img" src="images/3.jpg" alt="Image 3"> -->
+                <a id="prev">&#10094;</a>
+                <a id="next">&#10095;</a>
+                <button class="btn-grp" id="btn1">Play</button>
+                <button class="btn-grp" id="btn2">Stop</button>
+            </div>
+        </div>
+    </section>
+
+    <!--GOOGLE MAP-->
+    <section class="block">
+        <div id="map"></div>
+        <div id="encart">
+            <canvas id="canvas">
+            </canvas>
+            <button class="btn-primary" id="sig-submitBtn">Submit Signature</button>
+            <button class="btn-default" id="effacer">Effacer Signature</button>
+        </div>
+
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+
+    </footer>
+
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="ajax.js"></script>
+    <script src="map.js"></script>
+    <script src="diaporama.js"></script>
+    <script src="canvas.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZwUdghUe2E5EJZOeqzp6B3K97Le6tdEg&callback=initMap"
+        async defer></script>
+</body>
+
+</html>
