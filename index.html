@@ -46,34 +46,40 @@
                     <img class="img" src="images/3.jpg" alt="Image 3">
                     <div class="infos-text">
                         <h2>Réservez votre vélo</h2>
-                        <p>3 possibilités : depuis la borne, sélectionner un Vélo’v et le libérer en appuyant sur le
-                            bouton du point d’attache ;
-                            depuis le vélo directement, poser la carte ou le ticket sur le lecteur de carte ; depuis
-                            l’application mobile,
-                            cliquer sur le bouton "libérer un Vélo’v" et choisir le vélo le mieux évalué par les
-                            utilisateurs précédents.
-                            Vous avez 60 secondes pour libérer le Vélo’v choisi</p>
+                        <p>Choisissez votre vélo sur l'emplacement de la map,notez vos nom et prénom et cliquer sur le
+                            bouton "Réserver".
+                            Une page s'ouvrira pour que vous puissiez faire votre signature.</p>
                     </div>
                 </div>
-                <!-- <img class="img" src="images/1.jpg" alt="Image 1">
-                <img class="img" src="images/2.jpg" alt="Image 2">
-                <img class="img" src="images/3.jpg" alt="Image 3"> -->
                 <a id="prev">&#10094;</a>
                 <a id="next">&#10095;</a>
-                <button class="btn-grp" id="btn1">Play</button>
-                <button class="btn-grp" id="btn2">Stop</button>
+                <div class="btn-grp">
+                    <button id="btn1">Play</button>
+                    <button id="btn2">Stop</button>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!--GOOGLE MAP-->
     <section class="block">
         <div id="map"></div>
-        <div id="encart">
-            <canvas id="canvas">
-            </canvas>
-            <button class="btn-primary" id="sig-submitBtn">Submit Signature</button>
-            <button class="btn-default" id="effacer">Effacer Signature</button>
+        <div class="englober">
+            <div id="encart">
+                <h2>Nom de la Station : <span id="stationName"></span></h2>
+                <p>Adresse : <span id="stationAddress"></span></p>
+                <p>Place disponible : <span id="standAvailable"></span></p>
+                <p>Nombre de vélo disponible : <span id="bikeAvailable"></span></p>
+                <input type="text" id="nom" name="nom" placeholder="Nom">
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom">
+                <input type="button" id="boutonResa" value="Réserver">
+
+            </div>
+            <div id="container-canvas">
+                <canvas id="canvas"></canvas>
+                <button class="btn-primary" id="submitSign">Envoyer</button>
+                <button class="btn-default" id="effacer">Effacer</button>
+            </div>
         </div>
 
     </section>
@@ -88,6 +94,7 @@
     <script src="map.js"></script>
     <script src="diaporama.js"></script>
     <script src="canvas.js"></script>
+    <script src="timer.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZwUdghUe2E5EJZOeqzp6B3K97Le6tdEg&callback=initMap"
         async defer></script>
 </body>

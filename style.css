@@ -4,6 +4,13 @@ html,body {
     padding: 0;
 }
 
+header {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+}
+
 h1 {
     color: #0a5bc5;
     font-family: Arial, Helvetica, sans-serif;
@@ -15,45 +22,102 @@ h1 {
     color: red;
 }
 
-.caroussel {
-    background: blue;
-}
-
 #container {
     height: 450px;
-    width: 650px;
     margin: 20px auto;
     position: relative;
   
 }
 
-/*.infos {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    border: 1px solid red;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 6%;
-}*/
-
 .img {
     height: 450px;
-    width: 650px;
+    width: 50%;
     position: absolute;
+    left: 25%;
 }
 .infos-text {
     z-index: 1;
     position: absolute;
-    /* display: flex; */
-    /* justify-content: center; */
+    font-style: italic;
+    font-weight: bold;
     text-align: center;
-    /* border: 1px solid; */
-    /* margin: 0 auto; */
     left: 50%;
     transform: translate(-50%, -50%);
     top: 50%;
-    color: white;
+    color: coral;
+    background-color: #505258;
+    opacity: 0.9;
+    
+}
+
+
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+    color: #f2f2f2;
+    font-weight: bold;
+    padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 0 3px 0 0 3px;
+    cursor: pointer;
+}
+
+#next {
+    border-radius: 3px 0 0 3px;
+    right: 0;
+}
+
+#prev:hover,
+#next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.btn-grp {
+    position: relative;
+    top: 93%;
+    width: 9%;
+}
+
+.block {
+    height: 100%;
+    display: flex;
+}
+
+#map {
+    height: 100%;
+    width: 50%;
+    border: 1px solid red;
+}
+
+.englober {
+    width: 50%;
+    border: 2px solid green;
+    background: coral;
+}
+#encart {
+    background: coral;
+}
+
+#container-canvas {
+    display: none;
+}
+/* RESPONSIVE QUERIES */
+
+@media only screen and (max-width: 992px) {
+
+
+
+.img {
+    width: 70%;
+}    
+
+.infos-text {
+    width: 50%;
+    position: absolute;
+    top: 54%;
+    background-color:red;
+
 }
 
 #prev,
@@ -79,15 +143,9 @@ h1 {
 }
 
 .btn-grp {
-    display: flex;
-}
-
-#btn1 {
     position: relative;
-}
-
-#btn2 {
-    position: absolute;
+    top: 93%;
+    width: 9%;
 }
 
 .block {
@@ -101,10 +159,18 @@ h1 {
     border: 1px solid red;
 }
 
-#encart {
+.englober {
     width: 50%;
     border: 2px solid green;
     background: coral;
 }
+#encart {
+    background: coral;
+}
 
+#container-canvas {
+    display: none;
+}
+
+}
 
